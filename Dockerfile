@@ -19,7 +19,7 @@ ENV LC_CTYPE ja_JP.UTF-8
 ENV LC_TIME ja_JP.UTF-8
 ENV LC_NAME ja_JP.UTF-8
 
-RUN apt-add-repository ppa:texlive-backports/ppa & apt-get install texlive-lang-cjk -y
+RUN apt-add-repository ppa:texlive-backports/ppa & apt-get install texlive-full -y
 
 
 
