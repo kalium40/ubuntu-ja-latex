@@ -6,9 +6,8 @@ LABEL  maintainer "Tatsuhiko Kono <i@p-nitrite.net>"
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get -y install language-pack-ja-base language-pack-ja make gcc autoconf build-essential software-properties-common curl tar
 RUN locale-gen ja_JP.UTF-8
-RUN dpkg-reconfigure locales
+RUN dpkg-reconfigure --frontend=noninteractive locales
 RUN echo "Asia/Tokyo" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
 
 ENV LC_ALL ja_JP.UTF-8
 ENV LC_MESSAGES ja_JP.UTF-8
